@@ -1,0 +1,50 @@
+.ourmodal{
+    width: 50%;
+    margin-left: 25%;
+    position: absolute;
+    animation: pop-up .4s ease-in-out;
+    z-index: 1;
+}
+
+.backdrop{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.movieCard{
+    height: 400px;
+    width: 25%;
+}
+
+.movieCard .card-body img{
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.cardBody{
+    object-fit: cover;
+}
+
+.cardBody img{
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+
+@keyframes pop-up{
+    from{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

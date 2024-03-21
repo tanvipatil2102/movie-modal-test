@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine test</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    
+    <div class="navbar bg-primary p-4">
+        <div class="logo">
+            <h1 class="text-white">Movie modal</h1>
+        </div>
+        <div class="text-right">
+            <button class="btn btn-warning" id="addBtn" type="button">Add Movie</button>
+        </div>
+    </div>
+
+    <div class="ourmodal d-none" id="ourmodal">
+        <div class="card carD">
+            <div class="card-body">
+                <div class="text-right">
+                    <i class="fa-solid fa-xmark cancel"></i>
+                </div>
+                <form id="formControl">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="imgSource">Path</label>
+                        <input type="text" class="form-control" id="imgSource">
+                    </div>
+                   <div class="form-group">
+                    <select id="rating" class="form-control">
+                        <option value="Select">Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                   </div>
+                   <div class="text-right">
+                    <button class="btn btn-primary" id="addMovie">Add movie</button>
+                    <button class="btn btn-primary d-none" type="button" id="updateBtn">Update movie</button>
+                    <button class="btn btn-danger cancel" type="button">Cancel</button>
+                   </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+            <div id="movieContainer" class="d-flex flex-wrap">
+                <!-- <div class="card mt-4 movieCard"> 
+                    <div class="card-header">
+                        <h4>title</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="" alt="">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-primary" type="button">Edit</button>
+                        <button class="btn btn-danger" type="button">Delete</button>
+                    </div>
+                </div> -->
+            </div>
+        
+    </div>
+
+    <div class="backdrop cancel d-none" id="backdrop"></div>
+    <script src="https://kit.fontawesome.com/c50655e319.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
